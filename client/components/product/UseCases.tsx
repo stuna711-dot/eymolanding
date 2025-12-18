@@ -2,7 +2,7 @@ const USE_CASES = [
   {
     title: "Morgens",
     subtitle: "Beruhigt deinen Körper spürbar",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F087a1df027df4da69604033c6d14357b?format=webp&width=800",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F5c83e30a34b54edaba00b6d3e502f8d1?format=webp&width=800",
     description: "Starte den Tag ruhiger. 10 Minuten mit Eymo auf der Brust, und die Morgenangst verliert ihren Griff."
   },
   {
