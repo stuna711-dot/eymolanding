@@ -1,4 +1,6 @@
 const CUSTOMER_PHOTOS = [
+  "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2Fdf8a52f162c24faa8c1ec8b1caa0d725?format=webp&width=400",
+  "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F4d20efbcb8a14a67b1b2c1dfc91981f4?format=webp&width=400",
   "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2Fc0a0d201e3004d2ba59a68465be2fba6?format=webp&width=400",
   "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2Feabbca5363444a39bf4b2f1cd43c41d8?format=webp&width=400",
   "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2Fdbdcc3ec1c154584a61dba91bb0ebeba?format=webp&width=400",
