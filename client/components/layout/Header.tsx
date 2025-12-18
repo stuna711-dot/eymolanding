@@ -7,7 +7,7 @@ import { useState } from "react";
 export function AnnouncementBar() {
   return (
     <div className="w-full bg-[#5a7684] text-white text-xs md:text-sm py-2.5 text-center font-medium tracking-wide uppercase">
-      Holiday Sale: Up to 30% off + 2 free gifts
+      Limitiertes Angebot: Nur noch 47 auf Lager + Gratis Calm-Guide E-Book
     </div>
   );
 }
@@ -29,12 +29,12 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4 mt-8">
-                <Link to="/" className="text-lg font-medium">Home</Link>
+                <Link to="/" className="text-lg font-medium">Startseite</Link>
                 <Link to="/shop" className="text-lg font-medium">Shop</Link>
-                <Link to="/bundle" className="text-lg font-medium">Bundle & Save</Link>
+                <Link to="/bundle" className="text-lg font-medium">Bundle & Sparen</Link>
                 <Link to="/community" className="text-lg font-medium">Community</Link>
-                <Link to="/about" className="text-lg font-medium">About</Link>
-                <Link to="/contact" className="text-lg font-medium">Contact</Link>
+                <Link to="/about" className="text-lg font-medium">Über uns</Link>
+                <Link to="/contact" className="text-lg font-medium">Kontakt</Link>
               </nav>
             </SheetContent>
           </Sheet>
@@ -43,14 +43,14 @@ export function Header() {
         {/* Desktop Nav (Left) */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           <Link to="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop</Link>
-          <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+          <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">Über uns</Link>
           <Link to="/community" className="text-sm font-medium hover:text-primary transition-colors">Community</Link>
         </nav>
 
         {/* Logo (Center) */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <Link to="/" className="flex items-center">
-            <span className="text-xl md:text-2xl font-bold tracking-tight">PULSE OF POTENTIAL</span>
+            <span className="text-xl md:text-2xl font-bold tracking-tight">TIANSOLE</span>
           </Link>
         </div>
 

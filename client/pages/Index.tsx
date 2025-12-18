@@ -2,7 +2,9 @@ import { Layout } from "@/components/layout/Layout";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductInfo } from "@/components/product/ProductInfo";
 import { Features } from "@/components/product/Features";
+import { HowItWorks } from "@/components/product/HowItWorks";
 import { Reviews } from "@/components/product/Reviews";
+import { Guarantee } from "@/components/product/Guarantee";
 import { StickyATC } from "@/components/product/StickyATC";
 
 export default function Index() {
@@ -23,7 +25,9 @@ export default function Index() {
       </div>
 
       <Features />
+      <HowItWorks />
       <Reviews />
+      <Guarantee />
       <StickyATC />
     </Layout>
   );

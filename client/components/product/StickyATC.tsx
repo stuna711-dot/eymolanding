@@ -25,11 +25,11 @@ export function StickyATC() {
     >
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="hidden md:block">
-          <div className="font-bold text-gray-900">Pookie the Panda Weighted Animal</div>
-          <div className="text-sm text-gray-500">$58.90</div>
+          <div className="font-bold text-gray-900">Eymo der Panda</div>
+          <div className="text-sm text-gray-500">89€</div>
         </div>
         <Button className="w-full md:w-auto md:px-8 font-bold shadow-lg shadow-primary/20">
-          Add to Cart
+          In den Warenkorb
         </Button>
       </div>
     </div>

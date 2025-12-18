@@ -21,7 +21,7 @@ export function ProductGallery() {
           className="h-full w-full object-cover object-center transition-all duration-500 hover:scale-105"
         />
         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
-          Best Seller
+          Bestseller
         </div>
       </div>
 
