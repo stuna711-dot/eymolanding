@@ -2,10 +2,10 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const IMAGES = [
-  "https://images.pexels.com/photos/754195/pexels-photo-754195.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/754195/pexels-photo-754195.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=2", // Placeholder variation
-  "https://images.pexels.com/photos/754195/pexels-photo-754195.jpeg?auto=compress&cs=tinysrgb&w=800&grayscale", // Placeholder variation
-  "https://images.pexels.com/photos/754195/pexels-photo-754195.jpeg?auto=compress&cs=tinysrgb&w=800&sepia", // Placeholder variation
+  "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2Fb761f623e472427cad2060f56fb01139?format=webp&width=800",
+  "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F5f9d0215c4cc43719f54b3b8c6c9fbbc?format=webp&width=800",
+  "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F91cc665cd363413a82d5c347b9c2c191?format=webp&width=800",
+  "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F087a1df027df4da69604033c6d14357b?format=webp&width=800",
 ];
 
 export function ProductGallery() {
@@ -14,10 +14,10 @@ export function ProductGallery() {
   return (
     <div className="flex flex-col gap-4">
       {/* Main Image */}
-      <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-gray-100 border border-gray-100">
+      <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-100">
         <img
           src={IMAGES[activeImage]}
-          alt="Product View"
+          alt="Eymo der Panda - Gewichtetes Plüschtier"
           className="h-full w-full object-cover object-center transition-all duration-500 hover:scale-105"
         />
         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
@@ -40,7 +40,7 @@ export function ProductGallery() {
           >
             <img
               src={img}
-              alt={`Thumbnail ${idx + 1}`}
+              alt={`Ansicht ${idx + 1}`}
               className="h-full w-full object-cover"
             />
           </button>

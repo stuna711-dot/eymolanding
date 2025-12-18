@@ -7,7 +7,8 @@ const REVIEWS = [
     rating: 5,
     title: "Ich weine nicht mehr jeden Morgen vor Angst",
     content: "Ich lege ihn auf meinen Schoß im Auto, bevor ich zur Arbeit fahre. Dieses Gewicht… es ist, als würde jemand sagen: 'Du schaffst das.' Innerhalb von zwei Wochen hatten sich meine Panikattacken von täglich auf 1-2 pro Woche reduziert.",
-    condition: "Panikstörung"
+    condition: "Panikstörung",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F63734ffc9460435782fa4e03fa9ddd00?format=webp&width=400"
   },
   {
     name: "Markus S., 35",
@@ -15,7 +16,8 @@ const REVIEWS = [
     rating: 5,
     title: "Mein stiller Therapeut",
     content: "Ich brauche Druck, um mich zu regulieren. Immer schon. Aber Gewichtsdecken sind mir zu einengend. Eymo ist perfekt – ich kann die Arme genau da hinlegen, wo ich sie brauche. Ich nehme ihn sogar mit auf Reisen.",
-    condition: "hochsensibel, ADHS"
+    condition: "hochsensibel, ADHS",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2Fd25b9f344f4c404bac3ad93897df30cd?format=webp&width=400"
   },
   {
     name: "Lena B., 42",
@@ -23,7 +25,8 @@ const REVIEWS = [
     rating: 5,
     title: "Das Einzige, das mich in dunklen Momenten hält",
     content: "Die Abende waren die Hölle. Kinder im Bett, Wohnung still, und dann diese Welle von Hoffnungslosigkeit. Eymo fühlt sich an wie das Einzige, das mich buchstäblich hält. Ich kann endlich atmen.",
-    condition: "alleinerziehende Mutter, Depression"
+    condition: "alleinerziehende Mutter, Depression",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F0778c91bb48944a7b45195757255343b%2F9733687223074a60a586995a40ee4f22?format=webp&width=400"
   },
 ];
 
@@ -42,25 +45,36 @@ export function Reviews() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-8">
           {REVIEWS.map((review, idx) => (
-            <div key={idx} className="bg-white p-6 lg:p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <Quote className="h-8 w-8 text-primary/20 mb-4" />
-              
-              <div className="flex gap-1 mb-3">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-[#FFB800] text-[#FFB800]" />
-                ))}
-              </div>
-              
-              <h3 className="font-bold text-lg text-gray-900 mb-3">{review.title}</h3>
-              
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed italic">
-                "{review.content}"
-              </p>
-              
-              <div className="pt-4 border-t border-gray-100">
-                <div className="font-semibold text-gray-900 text-sm">{review.name}</div>
-                <div className="text-xs text-gray-500 mt-1">{review.condition}</div>
-                <div className="text-xs text-gray-400 mt-1">{review.date}</div>
+            <div key={idx} className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              {review.image && (
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={review.image}
+                    alt={review.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              <div className="p-6 lg:p-8">
+                <Quote className="h-8 w-8 text-primary/20 mb-4" />
+
+                <div className="flex gap-1 mb-3">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-[#FFB800] text-[#FFB800]" />
+                  ))}
+                </div>
+
+                <h3 className="font-bold text-lg text-gray-900 mb-3">{review.title}</h3>
+
+                <p className="text-gray-700 text-sm mb-4 leading-relaxed italic">
+                  "{review.content}"
+                </p>
+
+                <div className="pt-4 border-t border-gray-100">
+                  <div className="font-semibold text-gray-900 text-sm">{review.name}</div>
+                  <div className="text-xs text-gray-500 mt-1">{review.condition}</div>
+                  <div className="text-xs text-gray-400 mt-1">{review.date}</div>
+                </div>
               </div>
             </div>
           ))}
