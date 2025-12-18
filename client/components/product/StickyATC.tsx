@@ -8,28 +8,41 @@ export function StickyATC() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Show after scrolling past the main hero section (approx 600px)
-      setIsVisible(scrollY > 600);
+      const checkout = document.getElementById('checkout');
+      const checkoutPosition = checkout?.offsetTop || 9999999;
+
+      // Show after scrolling past hero, hide when reaching checkout
+      setIsVisible(scrollY > 600 && scrollY < checkoutPosition - 100);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToCheckout = () => {
+    document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-40 transform transition-transform duration-300 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]",
+        "fixed bottom-0 left-0 right-0 bg-white border-t-2 border-primary/20 p-4 z-40 transform transition-transform duration-300 shadow-[0_-8px_16px_-4px_rgba(0,0,0,0.2)]",
         isVisible ? "translate-y-0" : "translate-y-full"
       )}
     >
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="hidden md:block">
           <div className="font-bold text-gray-900">Eymo der Panda</div>
-          <div className="text-sm text-gray-500">89€</div>
+          <div className="flex items-center gap-2">
+            <span className="text-xl font-bold text-gray-900">59€</span>
+            <span className="text-sm text-gray-400 line-through">84€</span>
+          </div>
         </div>
-        <Button className="w-full md:w-auto md:px-8 font-bold shadow-lg shadow-primary/20">
-          In den Warenkorb
+        <Button
+          onClick={scrollToCheckout}
+          className="w-full md:w-auto md:px-12 h-12 font-bold shadow-xl shadow-primary/30 hover:shadow-primary/50 transition-all"
+        >
+          Jetzt bestellen
         </Button>
       </div>
     </div>

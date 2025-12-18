@@ -1,39 +1,30 @@
 import { Layout } from "@/components/layout/Layout";
-import { ProductGallery } from "@/components/product/ProductGallery";
-import { ProductInfo } from "@/components/product/ProductInfo";
+import { ProductHero } from "@/components/sales/ProductHero";
 import { Features } from "@/components/product/Features";
 import { UseCases } from "@/components/product/UseCases";
 import { HowItWorks } from "@/components/product/HowItWorks";
+import { SocialProof } from "@/components/sales/SocialProof";
+import { CTABanner } from "@/components/sales/CTABanner";
 import { Comparison } from "@/components/product/Comparison";
-import { Reviews } from "@/components/product/Reviews";
 import { CustomerGallery } from "@/components/product/CustomerGallery";
-import { Guarantee } from "@/components/product/Guarantee";
+import { Checkout } from "@/components/sales/Checkout";
 import { StickyATC } from "@/components/product/StickyATC";
 
 export default function Index() {
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-8 md:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Gallery */}
-          <div className="lg:sticky lg:top-24 h-fit">
-            <ProductGallery />
-          </div>
-
-          {/* Right Column - Product Info */}
-          <div>
-            <ProductInfo />
-          </div>
-        </div>
-      </div>
-
+      <ProductHero />
+      <SocialProof />
+      <CTABanner />
       <Features />
+      <CTABanner variant="secondary" />
       <UseCases />
       <HowItWorks />
+      <CTABanner />
       <Comparison />
-      <Reviews />
       <CustomerGallery />
-      <Guarantee />
+      <CTABanner variant="secondary" />
+      <Checkout />
       <StickyATC />
     </Layout>
   );
