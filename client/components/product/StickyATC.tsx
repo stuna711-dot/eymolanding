@@ -19,10 +19,6 @@ export function StickyATC() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToCheckout = () => {
-    document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div
       className={cn(
@@ -39,7 +35,7 @@ export function StickyATC() {
           </div>
         </div>
         <Button
-          onClick={scrollToCheckout}
+          onClick={() => window.location.href = 'https://tiansole.de/products/eymo-der-panda'}
           className="w-full md:w-auto md:px-12 h-12 font-bold shadow-xl shadow-primary/30 hover:shadow-primary/50 transition-all"
         >
           Jetzt bestellen

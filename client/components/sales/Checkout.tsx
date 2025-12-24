@@ -84,7 +84,10 @@ export function Checkout() {
               </div>
 
               {/* CTA Button */}
-              <Button className="w-full h-16 text-xl font-bold shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all mb-4">
+              <Button
+                onClick={() => window.location.href = 'https://tiansole.de/products/eymo-der-panda'}
+                className="w-full h-16 text-xl font-bold shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all mb-4"
+              >
                 <ShoppingBag className="mr-2 h-6 w-6" />
                 Jetzt sicher bestellen
               </Button>

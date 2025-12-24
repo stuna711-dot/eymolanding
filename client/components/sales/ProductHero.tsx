@@ -2,8 +2,8 @@ import { Check, Star, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function ProductHero() {
-  const scrollToCheckout = () => {
-    document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' });
+  const handleBuyClick = () => {
+    window.location.href = 'https://tiansole.de/products/eymo-der-panda';
   };
 
   return (
@@ -73,8 +73,8 @@ export function ProductHero() {
                 Nur noch 47 auf Lager
               </div>
 
-              <Button 
-                onClick={scrollToCheckout}
+              <Button
+                onClick={handleBuyClick}
                 className="w-full h-16 text-xl font-bold shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all mb-4"
               >
                 <ShoppingBag className="mr-2 h-6 w-6" />

@@ -6,8 +6,8 @@ interface CTABannerProps {
 }
 
 export function CTABanner({ variant = "primary" }: CTABannerProps) {
-  const scrollToCheckout = () => {
-    document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' });
+  const handleBuyClick = () => {
+    window.location.href = 'https://tiansole.de/products/eymo-der-panda';
   };
 
   if (variant === "secondary") {
@@ -17,8 +17,8 @@ export function CTABanner({ variant = "primary" }: CTABannerProps) {
           <p className="text-lg text-gray-700 mb-4 font-medium">
             Bereit, deinem Nervensystem die Ruhe zu geben, die es braucht?
           </p>
-          <Button 
-            onClick={scrollToCheckout}
+          <Button
+            onClick={handleBuyClick}
             variant="outline"
             size="lg"
             className="text-lg font-bold px-8"
@@ -41,8 +41,8 @@ export function CTABanner({ variant = "primary" }: CTABannerProps) {
             Wie viele schlaflose Nächte noch? Wie viele Panikattacken musst du noch alleine durchstehen?
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button 
-              onClick={scrollToCheckout}
+            <Button
+              onClick={handleBuyClick}
               size="lg"
               className="w-full sm:w-auto h-14 text-lg font-bold shadow-xl shadow-primary/30"
             >
