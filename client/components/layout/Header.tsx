@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export function AnnouncementBar() {
   return (
-    <div className="w-full bg-[#5a7684] text-white text-xs md:text-sm py-2.5 text-center font-medium tracking-wide uppercase">
+    <div className="w-full bg-[#53537E] text-white text-xs md:text-sm py-2.5 text-center font-medium tracking-wide uppercase">
       🔥 Nur noch 47 auf Lager – 30% Rabatt nur heute: 59€ statt 84€
     </div>
   );
