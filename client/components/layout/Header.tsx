@@ -1,8 +1,4 @@
 import { Link } from "react-router-dom";
-import { Search, ShoppingBag, User, Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useState } from "react";
 
 export function AnnouncementBar() {
   return (
