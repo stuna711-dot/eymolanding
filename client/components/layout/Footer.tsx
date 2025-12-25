@@ -10,24 +10,34 @@ export function Footer() {
 
           {/* Legal Links */}
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm">
-            <a href="https://tiansole.de/pages/agb" className="hover:underline transition-colors">
+            <a
+              href="https://tiansole.de/pages/agb"
+              className="hover:underline transition-colors"
+            >
               AGB
             </a>
-            <a href="https://tiansole.de/pages/datenschutz" className="hover:underline transition-colors">
+            <a
+              href="https://tiansole.de/pages/datenschutz"
+              className="hover:underline transition-colors"
+            >
               Datenschutz
             </a>
-            <a href="https://tiansole.de/pages/impressum" className="hover:underline transition-colors">
+            <a
+              href="https://tiansole.de/pages/impressum"
+              className="hover:underline transition-colors"
+            >
               Impressum
             </a>
-            <a href="https://tiansole.de/pages/widerufsbelehrung" className="hover:underline transition-colors">
+            <a
+              href="https://tiansole.de/pages/widerufsbelehrung"
+              className="hover:underline transition-colors"
+            >
               Widerrufsbelehrung
             </a>
           </div>
 
           {/* Copyright */}
-          <p className="text-sm opacity-90">
-            © 2025, Tiansole
-          </p>
+          <p className="text-sm opacity-90">© 2025, Tiansole</p>
         </div>
       </div>
     </footer>
