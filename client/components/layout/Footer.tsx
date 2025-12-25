@@ -26,18 +26,6 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Payment Icons */}
-          <div className="flex flex-wrap items-center justify-center gap-2 py-4">
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg" alt="American Express" className="h-6" />
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/37fc65d0be90813e3499.svg" alt="Apple Pay" className="h-6" />
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/b4426b4244e87d3f50c5.svg" alt="Google Pay" className="h-6" />
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/84bf4f9e9870c4842bb4.svg" alt="Maestro" className="h-6" />
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/37fc65d0be90813e3499.svg" alt="Mastercard" className="h-6" />
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c280ae8c76b5f7c5c695.svg" alt="PayPal" className="h-6" />
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/87df356e66f9e4d8ca72.svg" alt="Shop Pay" className="h-6" />
-            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg" alt="Visa" className="h-6" />
-          </div>
-
           {/* Copyright */}
           <p className="text-sm opacity-90">
             © 2025, Tiansole
