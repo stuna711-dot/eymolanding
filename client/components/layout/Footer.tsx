@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export function Footer() {
   return (
     <footer className="bg-[#53537E] text-white py-12">
@@ -12,18 +10,18 @@ export function Footer() {
 
           {/* Legal Links */}
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm">
-            <Link to="/agb" className="hover:underline transition-colors">
+            <a href="https://tiansole.de/pages/agb" className="hover:underline transition-colors">
               AGB
-            </Link>
-            <Link to="/datenschutz" className="hover:underline transition-colors">
+            </a>
+            <a href="https://tiansole.de/pages/datenschutz" className="hover:underline transition-colors">
               Datenschutz
-            </Link>
-            <Link to="/impressum" className="hover:underline transition-colors">
+            </a>
+            <a href="https://tiansole.de/pages/impressum" className="hover:underline transition-colors">
               Impressum
-            </Link>
-            <Link to="/widerrufsbelehrung" className="hover:underline transition-colors">
+            </a>
+            <a href="https://tiansole.de/pages/widerufsbelehrung" className="hover:underline transition-colors">
               Widerrufsbelehrung
-            </Link>
+            </a>
           </div>
 
           {/* Copyright */}
