@@ -1,81 +1,47 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
+    <footer className="bg-[#53537E] text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-bold text-lg mb-6">Schnelllinks</h3>
-            <ul className="space-y-3">
-              <li><Link to="/search" className="text-gray-600 hover:text-primary transition-colors">Suchen</Link></li>
-              <li><Link to="/track" className="text-gray-600 hover:text-primary transition-colors">Bestellung verfolgen</Link></li>
-              <li><Link to="/bulk" className="text-gray-600 hover:text-primary transition-colors">Großbestellungen</Link></li>
-              <li><Link to="/shipping" className="text-gray-600 hover:text-primary transition-colors">Versandrichtlinien</Link></li>
-              <li><Link to="/refund" className="text-gray-600 hover:text-primary transition-colors">Rückgaberecht</Link></li>
-              <li><Link to="/privacy" className="text-gray-600 hover:text-primary transition-colors">Datenschutz</Link></li>
-              <li><Link to="/terms" className="text-gray-600 hover:text-primary transition-colors">AGB</Link></li>
-            </ul>
+        <div className="text-center space-y-6">
+          {/* Legal Heading */}
+          <h3 className="text-sm font-semibold tracking-wider uppercase">
+            RECHTLICHES
+          </h3>
+
+          {/* Legal Links */}
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm">
+            <Link to="/agb" className="hover:underline transition-colors">
+              AGB
+            </Link>
+            <Link to="/datenschutz" className="hover:underline transition-colors">
+              Datenschutz
+            </Link>
+            <Link to="/impressum" className="hover:underline transition-colors">
+              Impressum
+            </Link>
+            <Link to="/widerrufsbelehrung" className="hover:underline transition-colors">
+              Widerrufsbelehrung
+            </Link>
           </div>
 
-          {/* Newsletter */}
-          <div className="lg:col-span-2">
-            <h3 className="font-bold text-lg mb-6">Gratis E-Book und Mystery-Rabatt sichern</h3>
-            <p className="text-gray-600 mb-4">
-              Werde Teil unserer Community und erhalte exklusiven Zugang zu neuen Produkten, Angeboten und mehr.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md">
-              <Input
-                type="email"
-                placeholder="Deine E-Mail-Adresse"
-                className="bg-gray-50 border-gray-200 focus:border-primary"
-              />
-              <Button type="submit" className="bg-primary hover:bg-primary/90 text-white px-8">
-                Anmelden
-              </Button>
-            </form>
+          {/* Payment Icons */}
+          <div className="flex flex-wrap items-center justify-center gap-2 py-4">
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg" alt="American Express" className="h-6" />
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/37fc65d0be90813e3499.svg" alt="Apple Pay" className="h-6" />
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/b4426b4244e87d3f50c5.svg" alt="Google Pay" className="h-6" />
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/84bf4f9e9870c4842bb4.svg" alt="Maestro" className="h-6" />
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/37fc65d0be90813e3499.svg" alt="Mastercard" className="h-6" />
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c280ae8c76b5f7c5c695.svg" alt="PayPal" className="h-6" />
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/87df356e66f9e4d8ca72.svg" alt="Shop Pay" className="h-6" />
+            <img src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg" alt="Visa" className="h-6" />
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="font-bold text-lg mb-6">Kontakt</h3>
-            <p className="text-gray-600 mb-4">
-              Fragen? Wir freuen uns von dir zu hören.
-            </p>
-            <a href="mailto:hello@tiansole.com" className="text-primary font-medium hover:underline block mb-6">
-              hello@tiansole.com
-            </a>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
-            © 2025, Tiansole. Alle Rechte vorbehalten.
+          {/* Copyright */}
+          <p className="text-sm opacity-90">
+            © 2025, Tiansole
           </p>
-          <div className="flex gap-3 opacity-60 grayscale hover:grayscale-0 transition-all">
-            {/* Payment Icons Placeholders */}
-            <div className="h-6 w-10 bg-gray-200 rounded" title="Visa"></div>
-            <div className="h-6 w-10 bg-gray-200 rounded" title="Mastercard"></div>
-            <div className="h-6 w-10 bg-gray-200 rounded" title="Amex"></div>
-            <div className="h-6 w-10 bg-gray-200 rounded" title="PayPal"></div>
-            <div className="h-6 w-10 bg-gray-200 rounded" title="Apple Pay"></div>
-          </div>
         </div>
       </div>
     </footer>
